@@ -4,5 +4,14 @@
 
 <!-- Html faltante -->
 <div>
+  <input type="text" id="idSearch" name="idSearch" class="form-control" placeholder="Search id" [(ngModel)]="idSearch">
   <button class="btn btn-primary" (click)="randomMethod()">Search</button>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-4" *ngFor="let todo of todos">
+        <app-todo [todoInput]="todo"></app-todo>
+      </div>
+  </div>
 </div>
